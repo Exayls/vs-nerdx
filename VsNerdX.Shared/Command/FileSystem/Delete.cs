@@ -18,7 +18,7 @@ namespace VsNerdX.Command.Navigation
         public ExecutionResult Execute(IExecutionContext executionContext, Keys key)
         {
             var state = CommandState.Handled;
-            if (executionContext.Stack.Count > 0 && executionContext.Stack.Last() == Keys.D && key == Keys.D)
+            if (executionContext.Stack.Count > 0 && executionContext.Stack.Last() == Keys.D && key == (Keys.D | Keys.Shift))
             {
                 try
                 {

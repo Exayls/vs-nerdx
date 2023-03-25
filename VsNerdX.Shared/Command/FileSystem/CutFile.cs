@@ -18,7 +18,7 @@ namespace VsNerdX.Command.Navigation
         public ExecutionResult Execute(IExecutionContext executionContext, Keys key)
         {
             var state = CommandState.Handled;
-            if (executionContext.Stack.Count > 0 && executionContext.Stack.Last() == Keys.C && key == Keys.C)
+            if (executionContext.Stack.Count > 0 && executionContext.Stack.Last() == Keys.D && key == Keys.D)
             {
                 try
                 {
@@ -28,7 +28,7 @@ namespace VsNerdX.Command.Navigation
 
                 executionContext = executionContext.Clear();
             }
-            else if (key == Keys.C)
+            else if (key == Keys.D)
             {
                 executionContext = executionContext.Add(key).With(delayedExecutable: this);
             }
